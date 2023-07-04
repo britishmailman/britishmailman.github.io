@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <body>
 	<?php
-		$json = file_get_contents('php://input');
-		$data = json_decode($json);
-		echo $data[0];
+		$jsonString = file_get_contents("php://input");
+		$myFile = "testFile.txt";
+		file_put_contents($myFile,$jsonString);
+		echo '{ "success": true }';
 	?>
-	<h3><?php echo $data; ?></h3>
+	<h3>t</h3>
 </body>
